@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.constraintlayout.motion.widget.MotionLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,7 +7,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    app:motionDebug="NO_DEBUG"
+    app:layoutDescription="@xml/activity_main_scene">
 
     <ImageView
         android:id="@+id/trooper"
@@ -25,9 +27,6 @@
         android:layout_height="@dimen/laser_height"
         android:contentDescription="@string/laser_fire"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/trooper"
         app:srcCompat="@drawable/laserfire" />
 
     <TextView
@@ -65,4 +64,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/yoda" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>
